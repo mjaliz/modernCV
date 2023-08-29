@@ -20,7 +20,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 class FMNISTDataset(Dataset):
     def __init__(self, x, y):
-        x = x.float()
+        x = x.float()/255
         x = x.view(-1, 28*28)
         self.x, self.y = x, y
 
