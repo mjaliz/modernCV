@@ -108,8 +108,8 @@ model, loss_fn, optimizer = get_model()
 train_losses, train_accuracies = [], []
 val_accuracies = []
 
-for epoch in range(5):
-    print(f" epoch {epoch + 1}/5")
+for epoch in range(10):
+    print(f" epoch {epoch + 1}/10")
     train_epoch_losses, train_epoch_accuracies = [], []
     val_epoch_accuracies = []
 
@@ -135,7 +135,7 @@ for epoch in range(5):
     train_accuracies.append(train_epoch_accuracy)
     val_accuracies.append(val_epoch_accuracy)
 
-epochs = np.arange(5)+1
+epochs = np.arange(10)+1
 plt.plot(epochs, train_accuracies, 'bo',
          label='Training accuracy')
 plt.plot(epochs, val_accuracies, 'r',
